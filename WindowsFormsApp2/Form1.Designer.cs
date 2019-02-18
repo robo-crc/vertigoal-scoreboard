@@ -64,11 +64,23 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.YellowOneJunk = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.YellowTwoJunk = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BlueOneJunk = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BlueTwoJunk = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTwoPenalty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueOnePenalty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YellowOnePenalty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YellowTwoPenalty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResetButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YellowOneJunk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YellowTwoJunk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueOneJunk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueTwoJunk)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -112,10 +124,10 @@
             this.BlueScore.BackColor = System.Drawing.Color.RoyalBlue;
             this.BlueScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BlueScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BlueScore.Location = new System.Drawing.Point(718, 9);
-            this.BlueScore.MinimumSize = new System.Drawing.Size(100, 100);
+            this.BlueScore.Location = new System.Drawing.Point(705, 9);
+            this.BlueScore.MinimumSize = new System.Drawing.Size(150, 100);
             this.BlueScore.Name = "BlueScore";
-            this.BlueScore.Size = new System.Drawing.Size(100, 100);
+            this.BlueScore.Size = new System.Drawing.Size(150, 100);
             this.BlueScore.TabIndex = 4;
             this.BlueScore.Text = "0";
             this.BlueScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,10 +138,10 @@
             this.YellowScore.BackColor = System.Drawing.Color.Yellow;
             this.YellowScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.YellowScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.YellowScore.Location = new System.Drawing.Point(477, 9);
-            this.YellowScore.MinimumSize = new System.Drawing.Size(100, 100);
+            this.YellowScore.Location = new System.Drawing.Point(411, 9);
+            this.YellowScore.MinimumSize = new System.Drawing.Size(150, 100);
             this.YellowScore.Name = "YellowScore";
-            this.YellowScore.Size = new System.Drawing.Size(100, 100);
+            this.YellowScore.Size = new System.Drawing.Size(150, 100);
             this.YellowScore.TabIndex = 5;
             this.YellowScore.Text = "0";
             this.YellowScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,7 +151,7 @@
             this.GameTime.AutoSize = true;
             this.GameTime.BackColor = System.Drawing.Color.Black;
             this.GameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.GameTime.Location = new System.Drawing.Point(545, 9);
+            this.GameTime.Location = new System.Drawing.Point(532, 9);
             this.GameTime.MinimumSize = new System.Drawing.Size(200, 100);
             this.GameTime.Name = "GameTime";
             this.GameTime.Size = new System.Drawing.Size(200, 100);
@@ -162,6 +174,11 @@
             0,
             0});
             this.BlueTwoPenalty.Location = new System.Drawing.Point(1156, 119);
+            this.BlueTwoPenalty.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
             this.BlueTwoPenalty.Name = "BlueTwoPenalty";
             this.BlueTwoPenalty.Size = new System.Drawing.Size(40, 20);
             this.BlueTwoPenalty.TabIndex = 8;
@@ -175,6 +192,11 @@
             0,
             0});
             this.BlueOnePenalty.Location = new System.Drawing.Point(1156, 51);
+            this.BlueOnePenalty.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
             this.BlueOnePenalty.Name = "BlueOnePenalty";
             this.BlueOnePenalty.Size = new System.Drawing.Size(40, 20);
             this.BlueOnePenalty.TabIndex = 9;
@@ -188,6 +210,11 @@
             0,
             0});
             this.YellowOnePenalty.Location = new System.Drawing.Point(67, 51);
+            this.YellowOnePenalty.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
             this.YellowOnePenalty.Name = "YellowOnePenalty";
             this.YellowOnePenalty.Size = new System.Drawing.Size(40, 20);
             this.YellowOnePenalty.TabIndex = 10;
@@ -201,6 +228,11 @@
             0,
             0});
             this.YellowTwoPenalty.Location = new System.Drawing.Point(67, 126);
+            this.YellowTwoPenalty.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
             this.YellowTwoPenalty.Name = "YellowTwoPenalty";
             this.YellowTwoPenalty.Size = new System.Drawing.Size(40, 20);
             this.YellowTwoPenalty.TabIndex = 11;
@@ -209,7 +241,7 @@
             // BlueOneScore
             // 
             this.BlueOneScore.AutoSize = true;
-            this.BlueOneScore.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BlueOneScore.BackColor = System.Drawing.Color.Gray;
             this.BlueOneScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.BlueOneScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BlueOneScore.Location = new System.Drawing.Point(1202, 8);
@@ -219,11 +251,12 @@
             this.BlueOneScore.TabIndex = 12;
             this.BlueOneScore.Text = "0";
             this.BlueOneScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BlueOneScore.Click += new System.EventHandler(this.BlueOneScore_Click);
             // 
             // BlueTwoScore
             // 
             this.BlueTwoScore.AutoSize = true;
-            this.BlueTwoScore.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BlueTwoScore.BackColor = System.Drawing.Color.Gray;
             this.BlueTwoScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.BlueTwoScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BlueTwoScore.Location = new System.Drawing.Point(1202, 76);
@@ -233,11 +266,12 @@
             this.BlueTwoScore.TabIndex = 13;
             this.BlueTwoScore.Text = "0";
             this.BlueTwoScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BlueTwoScore.Click += new System.EventHandler(this.BlueTwoScore_Click);
             // 
             // YellowTwoScore
             // 
             this.YellowTwoScore.AutoSize = true;
-            this.YellowTwoScore.BackColor = System.Drawing.Color.Yellow;
+            this.YellowTwoScore.BackColor = System.Drawing.Color.Gray;
             this.YellowTwoScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.YellowTwoScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.YellowTwoScore.Location = new System.Drawing.Point(11, 83);
@@ -247,11 +281,12 @@
             this.YellowTwoScore.TabIndex = 14;
             this.YellowTwoScore.Text = "0";
             this.YellowTwoScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.YellowTwoScore.Click += new System.EventHandler(this.YellowTwoScore_Click);
             // 
             // YellowOneScore
             // 
             this.YellowOneScore.AutoSize = true;
-            this.YellowOneScore.BackColor = System.Drawing.Color.Yellow;
+            this.YellowOneScore.BackColor = System.Drawing.Color.Gray;
             this.YellowOneScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.YellowOneScore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.YellowOneScore.Location = new System.Drawing.Point(11, 8);
@@ -261,6 +296,7 @@
             this.YellowOneScore.TabIndex = 15;
             this.YellowOneScore.Text = "0";
             this.YellowOneScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.YellowOneScore.Click += new System.EventHandler(this.YellowOneScore_Click);
             // 
             // LowerTopTowerYellow
             // 
@@ -529,7 +565,7 @@
             // ResetButton
             // 
             this.ResetButton.BackColor = System.Drawing.Color.Transparent;
-            this.ResetButton.Location = new System.Drawing.Point(537, 146);
+            this.ResetButton.Location = new System.Drawing.Point(533, 146);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(186, 178);
             this.ResetButton.TabIndex = 52;
@@ -641,6 +677,78 @@
             this.comboBox4.Size = new System.Drawing.Size(338, 33);
             this.comboBox4.TabIndex = 58;
             // 
+            // YellowOneJunk
+            // 
+            this.YellowOneJunk.Location = new System.Drawing.Point(194, 51);
+            this.YellowOneJunk.Name = "YellowOneJunk";
+            this.YellowOneJunk.Size = new System.Drawing.Size(40, 20);
+            this.YellowOneJunk.TabIndex = 59;
+            this.YellowOneJunk.ValueChanged += new System.EventHandler(this.YellowOneJunk_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(158, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Junk";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(158, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "Junk";
+            // 
+            // YellowTwoJunk
+            // 
+            this.YellowTwoJunk.Location = new System.Drawing.Point(194, 128);
+            this.YellowTwoJunk.Name = "YellowTwoJunk";
+            this.YellowTwoJunk.Size = new System.Drawing.Size(40, 20);
+            this.YellowTwoJunk.TabIndex = 61;
+            this.YellowTwoJunk.ValueChanged += new System.EventHandler(this.YellowTwoJunk_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(976, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Junk";
+            // 
+            // BlueOneJunk
+            // 
+            this.BlueOneJunk.Location = new System.Drawing.Point(1012, 51);
+            this.BlueOneJunk.Name = "BlueOneJunk";
+            this.BlueOneJunk.Size = new System.Drawing.Size(40, 20);
+            this.BlueOneJunk.TabIndex = 63;
+            this.BlueOneJunk.ValueChanged += new System.EventHandler(this.BlueOneJunk_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(976, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Junk";
+            // 
+            // BlueTwoJunk
+            // 
+            this.BlueTwoJunk.Location = new System.Drawing.Point(1012, 119);
+            this.BlueTwoJunk.Name = "BlueTwoJunk";
+            this.BlueTwoJunk.Size = new System.Drawing.Size(40, 20);
+            this.BlueTwoJunk.TabIndex = 65;
+            this.BlueTwoJunk.ValueChanged += new System.EventHandler(this.BlueTwoJunk_ValueChanged);
+            // 
             // Vertigoal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -648,6 +756,14 @@
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.Scoring_Display_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.BlueTwoJunk);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.BlueOneJunk);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.YellowTwoJunk);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.YellowOneJunk);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -690,6 +806,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.YellowOnePenalty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YellowTwoPenalty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResetButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YellowOneJunk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YellowTwoJunk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueOneJunk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueTwoJunk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,6 +834,10 @@
         private bool UpperBotRedMultiply;
         private bool TopBoxRedMultipy;
         private bool BotBoxRedMultiply;
+        private bool blueOneScoring;
+        private bool BlueTwoScoring;
+        private bool yellowOneScoring;
+        private bool yellowTwoScoring;
 
         private int timeLeft;
     
@@ -752,6 +876,14 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.NumericUpDown YellowOneJunk;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown YellowTwoJunk;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown BlueOneJunk;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown BlueTwoJunk;
     }
 }
 

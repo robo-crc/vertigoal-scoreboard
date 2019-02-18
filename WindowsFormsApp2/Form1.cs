@@ -237,16 +237,44 @@ namespace WindowsFormsApp2
         {
             int score = Convert.ToInt32(LowerTopTowerBlue.Text) + Convert.ToInt32(LowerBotTowerBlue.Text) + Convert.ToInt32(TopBoxBlue.Text) + Convert.ToInt32(BotBoxBlue.Text) + Convert.ToInt32(UpperTopTowerBlue.Text) + Convert.ToInt32(UpperBotTowerBlue.Text);
             BlueScore.Text = score.ToString();
-            BlueOneScore.Text = (score - Convert.ToInt32(BlueOnePenalty.Value)).ToString();
-            BlueTwoScore.Text = (score - Convert.ToInt32(BlueTwoPenalty.Value)).ToString();
+
+            if (blueOneScoring ^ BlueTwoScoring)
+            {
+                score = Convert.ToInt32(score * 1.5);
+            }
+
+            if (this.blueOneScoring)
+            {
+                BlueOneScore.Text = Math.Round((score - (Convert.ToInt32(BlueOneJunk.Value) * 0.04 * score) - Convert.ToInt32(BlueOnePenalty.Value))).ToString();
+            }
+            if (this.BlueTwoScoring)
+            {
+                BlueTwoScore.Text = Math.Round((score - (Convert.ToInt32(BlueTwoJunk.Value) * 0.04 * score) - Convert.ToInt32(BlueTwoPenalty.Value))).ToString();
+            }
         }
 
         private void updateYellowScore()
         {
+            
             int score = Convert.ToInt32(LowerTopTowerYellow.Text) + Convert.ToInt32(LowerBotTowerYellow.Text) + Convert.ToInt32(TopBoxYellow.Text) + Convert.ToInt32(BotBoxYellow.Text) + Convert.ToInt32(UpperTopTowerYellow.Text) + Convert.ToInt32(UpperBotTowerYellow.Text);
+            
             YellowScore.Text = score.ToString();
-            YellowOneScore.Text = (score - Convert.ToInt32(YellowOnePenalty.Value)).ToString();
-            YellowTwoScore.Text = (score - Convert.ToInt32(YellowTwoPenalty.Value)).ToString();
+
+            if (yellowOneScoring ^ yellowTwoScoring)
+            {
+                score = Convert.ToInt32(score * 1.5);
+            }
+
+
+            if (this.yellowOneScoring)
+            {
+                YellowOneScore.Text = Math.Round((score - (Convert.ToInt32(YellowOneJunk.Value) * 0.04 * score)  - Convert.ToInt32(YellowOnePenalty.Value))).ToString();
+
+            }
+            if (this.yellowTwoScoring)
+            {
+                YellowTwoScore.Text = Math.Round((score - (Convert.ToInt32(YellowTwoJunk.Value) * 0.04 * score) - Convert.ToInt32(YellowTwoPenalty.Value))).ToString();
+            }
         }
 
         private void LowerTopTowerRed_Click(object sender, EventArgs e)
@@ -464,8 +492,14 @@ namespace WindowsFormsApp2
                 this.BlueTwoPenalty.Value = 0;
                 this.YellowOnePenalty.Value = 0;
                 this.YellowTwoPenalty.Value = 0;
-
-
+                this.blueOneScoring = false;
+                this.BlueTwoScoring = false;
+                this.yellowOneScoring = false;
+                this.yellowTwoScoring = false;
+                this.YellowOneScore.BackColor = System.Drawing.Color.Gray;
+                this.YellowTwoScore.BackColor = System.Drawing.Color.Gray;
+                this.BlueOneScore.BackColor = System.Drawing.Color.Gray;
+                this.BlueTwoScore.BackColor = System.Drawing.Color.Gray;
             }
             else
 {
@@ -489,6 +523,54 @@ namespace WindowsFormsApp2
         }
 
         private void BlueTwoPenalty_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlueScore();
+        }
+
+        private void YellowOneScore_Click(object sender, EventArgs e)
+        {
+            YellowOneScore.BackColor = System.Drawing.Color.Yellow;
+            yellowOneScoring = true;
+            updateYellowScore();
+        }
+
+        private void YellowTwoScore_Click(object sender, EventArgs e)
+        {
+            YellowTwoScore.BackColor = System.Drawing.Color.Yellow;
+            yellowTwoScoring = true;
+            updateYellowScore();
+        }
+
+        private void BlueOneScore_Click(object sender, EventArgs e)
+        {
+            BlueOneScore.BackColor = System.Drawing.Color.RoyalBlue;
+            blueOneScoring = true;
+            updateBlueScore();
+        }
+
+        private void BlueTwoScore_Click(object sender, EventArgs e)
+        {
+            BlueTwoScore.BackColor = System.Drawing.Color.RoyalBlue;
+            BlueTwoScoring = true;
+            updateBlueScore();
+        }
+
+        private void YellowOneJunk_ValueChanged(object sender, EventArgs e)
+        {
+            updateYellowScore();
+        }
+
+        private void YellowTwoJunk_ValueChanged(object sender, EventArgs e)
+        {
+            updateYellowScore();
+        }
+
+        private void BlueOneJunk_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlueScore();
+        }
+
+        private void BlueTwoJunk_ValueChanged(object sender, EventArgs e)
         {
             updateBlueScore();
         }
