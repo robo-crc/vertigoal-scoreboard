@@ -381,12 +381,12 @@ namespace WindowsFormsApp2
             updateYellowScore();
         }
 
-        private void GameTime_Click(object sender, EventArgs e)
+        public void GameTime_Click(object sender, EventArgs e)
         {
             this.timer1.Start();
         }
 
-        private void GameTime_DoubleClick(object sender, EventArgs e)
+        public void GameTime_DoubleClick(object sender, EventArgs e)
         {
             this.timer1.Stop();
         }
@@ -408,7 +408,7 @@ namespace WindowsFormsApp2
             
         }
 
-        private void ResetButton_DoubleClick(object sender, EventArgs e)
+        public void ResetButton_DoubleClick(object sender, EventArgs e)
         {
             var confirmResult =  MessageBox.Show("Reset game state?",
                                      "Confirm reset",
